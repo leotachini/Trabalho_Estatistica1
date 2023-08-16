@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos Agropecuários</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h3><a Brasil href="index.html">Voltar ao Menu</a></h3>
+    <h3>Gráfico Brasil</h3>
+    <canvas id="graficoBR"></canvas>
+    <h3>Gráfico Santa Catarina</h3>
+    <canvas id="graficoSC"></canvas>
+    <h3>Gráfico Cafe Santa Catarina</h3>
+    <canvas id="graficoCafe"></canvas>
+    <h3>Gráfico Botuverá</h3>
+    <canvas id="graficoBT"></canvas>
+    <script>
+        var ctxLeite = document.getElementById('graficoSC').getContext('2d');
+        var graficoSC = new Chart(ctxLeite, {
+          type: 'line',
+          data: {
+            labels: ['2010', '2015', '2020'],
+            datasets: [
+            {
+            label: 'Leite (Litros)',
+            data: [2381130, 3059903, 3137219],
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Ovos',
+            data: [209582, 223830, 270547],
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Bovinos',
+            data: [3985662, 4382299, 4532618],
+            backgroundColor: 'rgba(255, 206, 86, 0.2)',
+            borderColor: 'rgba(255, 206, 86, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Suínos',
+            data: [7817536, 6533948, 7805614],
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Galináceos',
+            data: [157359368, 144248301, 136322626],
+            backgroundColor: 'rgba(153, 102, 255, 0.2)',
+            borderColor: 'rgba(153, 102, 255, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Banana (Toneladas)',
+            data: [663892, 710183, 669255],
+            backgroundColor: 'rgba(255, 159, 64, 0.2)',
+            borderColor: 'rgba(255, 159, 64, 1)',
+            borderWidth: 1
+          },
+        
+          {
+            label: 'Cana-de-Açúcar (Toneladas)',
+            data: [422014, 384625, 191018],
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Laranja (Toneladas)',
+            data: [96031, 47880, 29251],
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Milho (Toneladas)',
+            data: [3653803, 3076480, 2701935],
+            backgroundColor: 'rgba(255, 206, 86, 0.2)',
+            borderColor: 'rgba(255, 206, 86, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Soja (Toneladas)',
+            data: [1378532, 2000323, 2243989],
+            backgroundColor: 'rgba(153, 102, 255, 0.2)',
+            borderColor: 'rgba(153, 102, 255, 1)',
+            borderWidth: 1
+          }
+            ]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+
+        var ctxCafe = document.getElementById('graficoCafe').getContext('2d');
+    var cafeChart = new Chart(ctxCafe, {
+      type: 'bar',
+      data: {
+        labels: ['2006', '2017'],
+        datasets: [
+          {
+            label: 'Produção de Café (Toneladas)',
+            data: [33, 4],
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    var ctx = document.getElementById('graficoBT').getContext('2d');
+    var graficoBT = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['2010', '2015', '2020'],
+        datasets: [
+          {
+            label: 'Leite (Litros)',
+            data: [500, 500, 164],
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Ovos (x 1000 dúzias)',
+            data: [19, 19, 43],
+            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Bovinos',
+            data: [2100, 1546, 1943],
+            backgroundColor: 'rgba(255, 206, 86, 0.2)',
+            borderColor: 'rgba(255, 206, 86, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Suínos',
+            data: [1032, 630, 1115],
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Galináceos',
+            data: [13500, 6182, 5594],
+            backgroundColor: 'rgba(153, 102, 255, 0.2)',
+            borderColor: 'rgba(153, 102, 255, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Banana (Toneladas)',
+            data: [735, 240, 180],
+            backgroundColor: 'rgba(255, 159, 64, 0.2)',
+            borderColor: 'rgba(255, 159, 64, 1)',
+            borderWidth: 1
+          },
+         
+          {
+            label: 'Laranja (Toneladas)',
+            data: [100, 120, 120],
+            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Milho (Toneladas)',
+            data: [280, 1070, 633],
+            backgroundColor: 'rgba(255, 206, 86, 0.2)',
+            borderColor: 'rgba(255, 206, 86, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Soja',
+            data: [0, 0, 0],
+            backgroundColor: 'rgba(153, 102, 255, 0.2)',
+            borderColor: 'rgba(153, 102, 255, 1)',
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+    
+    var ctx = document.getElementById('graficoBR').getContext('2d');
+    var graficoBR = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['2010', '2015', '2020'],
+        datasets: [
+          {
+            label: 'Leite (Litros)',
+            data: [30715460, 34609588, 35316667],
+            backgroundColor: 'rgba(75, 192, 192, 0.5)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Ovos',
+            data: [3246719, 3768233, 4767519],
+            backgroundColor: 'rgba(255, 99, 132, 0.5)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Bovinos',
+            data: [209541109, 215220508, 217836282],
+            backgroundColor: 'rgba(255, 206, 86, 0.5)',
+            borderColor: 'rgba(255, 206, 86, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Suínos',
+            data: [38956758, 39795222, 41211188],
+            backgroundColor: 'rgba(54, 162, 235, 0.5)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Galináceos',
+            data: [1238912537, 1326452695, 1478424361],
+            backgroundColor: 'rgba(153, 102, 255, 0.5)',
+            borderColor: 'rgba(153, 102, 255, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Banana (Toneladas)',
+            data: [6969306, 6859227, 6613537],
+            backgroundColor: 'rgba(255, 159, 64, 0.5)',
+            borderColor: 'rgba(255, 159, 64, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Café (Toneladas)',
+            data: [2907265, 2647504, 3706583],
+            backgroundColor: 'rgba(255, 99, 132, 0.5)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Cana-de-Açúcar (Toneladas)',
+            data: [717463793, 750290277, 756070576],
+            backgroundColor: 'rgba(255, 206, 86, 0.5)',
+            borderColor: 'rgba(255, 206, 86, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Laranja (Toneladas)',
+            data: [18503139, 16953015, 16721586],
+            backgroundColor: 'rgba(54, 162, 235, 0.5)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Milho (Toneladas)',
+            data: [55364271, 85283074, 103991747],
+            backgroundColor: 'rgba(153, 102, 255, 0.5)',
+            borderColor: 'rgba(153, 102, 255, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Soja (Toneladas)',
+            data: [68756343, 97464936, 121820949],
+            backgroundColor: 'rgba(255, 206, 86, 0.5)',
+            borderColor: 'rgba(255, 206, 86, 1)',
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+      </script>
+</body>
+</html>

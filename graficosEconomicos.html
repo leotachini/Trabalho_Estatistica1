@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos Econômicos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h3><a Brasil href="index.html">Voltar ao Menu</a></h3>
+
+    <h3>Gráfico Brasil</h3>
+    <canvas id="graficoBR"></canvas>
+    <canvas id="graficoBR1"></canvas>
+    <h3>Gráficos Santa Catarina</h3>
+    <canvas id="graficoSC"></canvas>
+<h3>Gráfico Botuverá</h3>
+    <canvas id="graficoBT"></canvas>
+
+    <script>
+        var ctx = document.getElementById('graficoBT').getContext('2d');
+        var myChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['2010', '2015', '2020'],
+            datasets: [
+              {
+                label: 'PIB (x 1000 R$)',
+                data: [102590, 231446.5, 348846.87],
+                backgroundColor: 'rgba(75, 192, 192, 0.5)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 1
+              },
+              {
+                label: 'PIB per capita',
+                data: [22960.97, 46823.08, 65548.08],
+                backgroundColor: 'rgba(255, 99, 132, 0.5)',
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 1
+              }
+            ]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+        var ctx = document.getElementById('graficoBR1').getContext('2d');
+    var graficoBR1 = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['2010', '2015', '2020'],
+        datasets: [
+          {
+            label: 'PIB per capita (R$)',
+            data: [19938.6, 29466.85, 35935.69],
+            borderColor: 'rgba(75, 192, 192, 1)',
+            fill: false
+          },
+          {
+            label: 'Custo m² (R$)',
+            data: [742.44, 963.39, 1615.19],
+            borderColor: 'rgba(255, 99, 132, 1)',
+            fill: false
+          }
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    var ctx = document.getElementById('graficoBR').getContext('2d');
+    var graficoBR = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['2010', '2015', '2020'],
+        datasets: [
+          {
+            label: 'Variação PIB (%)',
+            data: [7.5, -3.8, 3.3],
+            borderColor: 'rgba(75, 192, 192, 1)',
+            fill: false
+          },
+          {
+            label: 'Inflação (INPC)',
+            data: [0.88, 1.48, -0.19],
+            borderColor: 'rgba(255, 99, 132, 1)',
+            fill: false
+          },
+          {
+            label: 'Inflação (IPCA-15)',
+            data: [3.26, 6.9, 0.67],
+            borderColor: 'rgba(54, 162, 235, 1)',
+            fill: false
+          },
+          {
+            label: 'Inflação (IPP)',
+            data: [0.84, 1.94, -0.35],
+            borderColor: 'rgba(255, 206, 86, 1)',
+            fill: false
+          },
+          {
+            label: 'Inflação (IPCA)',
+            data: [5.91, 10.67, 4.52],
+            borderColor: 'rgba(75, 192, 192, 1)',
+            fill: false
+          }
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    var ctx = document.getElementById('graficoSC').getContext('2d');
+    var graficoSC = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['2010', '2015', '2020'],
+        datasets: [
+          {
+            label: 'Variação PIB (%)',
+            data: [7.5, -3.8, 3.3],
+            borderColor: 'rgba(75, 192, 192, 1)',
+            fill: false
+          },
+          {
+            label: 'Inflação (INPC)',
+            data: [6.47, 11.28, 5.45],
+            borderColor: 'rgba(255, 99, 132, 1)',
+            fill: false
+          },
+          {
+            label: 'Inflação (IPCA)',
+            data: [5.91, 10.67, 4.52],
+            borderColor: 'rgba(54, 162, 235, 1)',
+            fill: false
+          }
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+      </script>
+</body>
+</html>

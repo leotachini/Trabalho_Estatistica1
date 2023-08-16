@@ -1,0 +1,40 @@
+body{
+    background-color: #aca4a4;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: darkcyan;
+}
+
+table{
+    border-collapse: collapse;
+    width: 50%;
+    border: #212529 1px solid;
+}
+
+img{
+    width: 400px;
+    height: 250px;
+}
+
+.bandeira{
+    width: 80px;
+    height: 50px;
+    padding: 5px;
+}
+
+canvas{
+    width: 400px;
+    height: 250px;
+    background-color: rgb(163, 155, 155);
+}

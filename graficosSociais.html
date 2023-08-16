@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos Sociais</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h3><a Brasil href="index.html">Voltar ao Menu</a></h3>
+
+    <h3>Gráfico Brasil</h3>
+    <canvas id="graficoSBR"></canvas>
+    <h3>Gráfico Santa Catarina</h3>
+    <canvas id="graficoSSC"></canvas>
+    <h3>Gráfico Botuverá</h3>
+    <canvas id="graficoSBT"></canvas>
+
+    <script>
+        var ctx = document.getElementById('graficoSBR').getContext('2d');
+        var graficoSBR = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: ['2010', '2015', '2020'],
+            datasets: [
+              {
+                label: 'Taxa de Desemprego',
+                data: [37.3, 37.3, 37.9],
+                fill: false,
+                borderColor: 'rgba(75, 192, 192, 1)',
+                borderWidth: 2
+              },
+              {
+                label: 'Taxa de Escolarização' ,
+                data: [98.2, 98.6, 95.2],
+                fill: false,
+                borderColor: 'rgba(255, 99, 132, 1)',
+                borderWidth: 2
+              },
+              {
+                label: 'Taxa de Analfabetismo',
+                data: [8.6, 8.0, 5.6],
+                fill: false,
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 2
+              },
+              {
+                label: 'Taxa de Fecundidade - Quantidade de Filhos por Mulher',
+                data: [1.87, 1.72, 1.56],
+                fill: false,
+                borderColor: 'rgba(255, 206, 86, 1)',
+                borderWidth: 2
+              },
+              {
+                label: 'Taxa de Mortalidade Infantil - Por mil nascidos vivos',
+                data: [17.22, 13.82, 11.9],
+                fill: false,
+                borderColor: 'rgba(153, 102, 255, 1)',
+                borderWidth: 2
+              }
+            ]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+
+        var ctx = document.getElementById('graficoSSC').getContext('2d');
+    var graficoSSC = new Chart(ctx, {
+      type: 'scatter',
+      data: {
+        labels: ['1991', '2000', '2010', '2012', '2014', '2016', '2019', '2021', '2022'],
+        datasets: [
+          {
+            label: 'Taxa de Desemprego',
+            data: [null, null, 6.7, null, null, 6.85, null, null, 9.3],
+            fill: false,
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 2
+          },
+          {
+            label: 'Taxa de Escolarização',
+            data: [95.1, null, null, null, 96.7, null, 99.7, null, null],
+            fill: false,
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 2
+          },
+          {
+            label: 'Taxa de Analfabetismo',
+            data: [null, null, 3.86, null, null, null, 2.1, null, 2.2],
+            fill: false,
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 2
+          },
+          {
+            label: 'Taxa de Fecundidade - Quantidade de Filhos por Mulher',
+            data: [2.6, 2.1, 1.7, null, null, null, null, null, null],
+            fill: false,
+            borderColor: 'rgba(255, 206, 86, 1)',
+            borderWidth: 2
+          },
+          {
+            label: 'Taxa de Mortalidade Infantil',
+            data: [null, null, null, 10.68, null, 8.35, null, 9.5, null],
+            fill: false,
+            borderColor: 'rgba(153, 102, 255, 1)',
+            borderWidth: 2
+          }
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+
+    var ctx = document.getElementById('graficoSBT').getContext('2d');
+    var graficoSBT = new Chart(ctx, {
+        type: 'scatter',
+        data: {
+            labels: ['1991', '2000', '2008', '2010', '2014', '2016', '2017', '2020', '2022'],
+        datasets: [
+        {
+            label: 'Taxa de Analfabetismo',
+            data: [null, null, null, 213, null, null, null, null, null],
+            fill: false,
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 2
+          },
+          {
+            label: 'Taxa de Fecundidade - Quantidade de Filhos por Mulher',
+            data: [2.6, 2.1, null, 1.7, null, null, null, null, null],
+            fill: false,
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 2
+          },
+          {
+            label: 'Taxa de Mortalidade Infantil',
+            data: [null, null, 22.22, null, null, 16.95, null, 34.48, null],
+            fill: false,
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 2
+          },
+          {
+            label: 'Taxa de Desemprego - População não Ocupada',
+            data: [null, null, null, null, 47.7, null, 52.0 ,52,5 , null],
+            fill: false,
+            borderColor: 'rgba(255, 206, 86, 1)',
+            borderWidth: 2
+          },
+          {
+            label: 'Taxa de Escolarização',
+            data: [null, null, null, 99, null, null, null, null, null],
+            fill: false,
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 2
+          }
+        ]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+      </script>
+</body>
+</html>
